@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="assets/favicon.ico" rel="shortcut icon" />
+        <link rel="stylesheet" href="css/owfont-regular.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>momentum</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="player">
+                <div class="player-controls">
+                    <button class="play-prev player-icon"></button>
+                    <button class="play player-icon" id="play" onclick="playSong()" data-aria=""></button>
+                    <button class="play-next player-icon"></button>
+                </div>
+                <ul class="play-list" id="play-list"></ul>
+            </div>
+            <div class="weather">
+                <input type="text" class="city" id="city" value="Almaty" onchange="getWeather()" />
+                <i class="weather-icon owf" id="weather-icon"></i>
+                <div class="weather-error"></div>
+                <div class="description-container">
+                    <span class="temperature" id="temp"></span>
+                    <span class="weather-description" id="temp-desc"></span>
+                </div>
+                <div class="wind" id="wind"></div>
+                <div class="humidity" id="humidity"></div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="slider-icons">
+                <button class="slide-prev slider-icon"></button>
+                <button class="slide-next slider-icon"></button>
+            </div>
+            <time class="time" id="time"></time>
+            <date class="date" id="date"></date>
+            <div class="greeting-container">
+                <span class="greeting" id="greeting"></span>
+                <input type="text" class="name" />
+            </div>
+        </main>
+        <footer class="footer">
+            <button class="change-quote" type="button" onclick="getData()"></button>
+            <div>
+                <div class="quote" id="quote"></div>
+                <div class="author" id="author"></div>
+            </div>
+        </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+            integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
